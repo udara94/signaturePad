@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+
+            <com.github.gcacace.signaturepad.views.SignaturePad
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/signature_pad" />
+
+
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/activity_navigation_tab"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/clear_pad"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/save_signature"
+                android:enabled="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

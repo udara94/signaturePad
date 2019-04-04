@@ -1,0 +1,39 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:2:1-8:12
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:2:1-8:12
+	package
+		ADDED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:3:11-52
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:5:11-38
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:4:11-36
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+application
+ADDED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml:7:5-20
+uses-sdk
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+		ADDED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+		ADDED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/DATA/Projects/Signature/signature-pad/src/main/AndroidManifest.xml

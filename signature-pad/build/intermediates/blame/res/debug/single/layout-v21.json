@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/layout-v21/notification_template_custom_big.xml"
+    }
+]

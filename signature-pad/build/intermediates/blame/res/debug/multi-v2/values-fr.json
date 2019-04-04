@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
+            "map": [
+                {
+                    "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/values-fr/values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/values-fr/values-fr.xml",
+            "map": [
+                {
+                    "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/values-fr/values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable/notification_icon_background.xml"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_low_normal.9.png",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_normal.9.png",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Volumes/DATA/Projects/Signature/signature-pad/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png",
+        "source": "/Users/udaraabeythilake/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/a8b1b17168f80242c1c8069674b08512/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+    }
+]

@@ -1,0 +1,83 @@
+[
+    {
+        "outputFile": "/Volumes/DATA/Projects/android-signaturepad/signature-pad/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 347,
+                    "endColumn": 40,
+                    "endOffset": 383
+                },
+                "from": {
+                    "file": "/Users/udaraabeythilake/.android/build-cache/b58db7a5e6953ae674705d5b2ffbf116f5aeb9f8/output/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 40,
+                        "endOffset": 91
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 388,
+                    "endColumn": 56,
+                    "endOffset": 440
+                },
+                "from": {
+                    "file": "/Users/udaraabeythilake/.android/build-cache/304d2d552759ed5102a092fdef585cb7f0a6df1f/output/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 56,
+                        "endOffset": 107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 445,
+                    "endColumn": 42,
+                    "endOffset": 483
+                },
+                "from": {
+                    "file": "/Users/udaraabeythilake/.android/build-cache/304d2d552759ed5102a092fdef585cb7f0a6df1f/output/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 112,
+                        "endColumn": 42,
+                        "endOffset": 150
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 488,
+                    "endColumn": 40,
+                    "endOffset": 524
+                },
+                "from": {
+                    "file": "/Users/udaraabeythilake/.android/build-cache/304d2d552759ed5102a092fdef585cb7f0a6df1f/output/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 155,
+                        "endColumn": 40,
+                        "endOffset": 191
+                    }
+                }
+            }
+        ]
+    }
+]

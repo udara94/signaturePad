@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../SignaturePad-Example/SignaturePad-Example.iml" filepath="$PROJECT_DIR$/../SignaturePad-Example/SignaturePad-Example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/signature-pad.iml" filepath="$PROJECT_DIR$/signature-pad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../signaturepad.iml" filepath="$PROJECT_DIR$/../signaturepad.iml" />
+    </modules>
+  </component>
+</project>

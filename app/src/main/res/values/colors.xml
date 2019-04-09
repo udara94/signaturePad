@@ -5,5 +5,21 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorNavIcon">#FFFFFF</color>
     <color name="colorNavText">#FFFFFF</color>
+    <color name="colorDarkYellow">#FFD300</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+
+
+
+
+    <color name="color_pick_red">#FF0000</color>
+    <color name="color_pick_orange">#FFA500</color>
+    <color name="color_pick_yellow">#FFFF00</color>
+    <color name="color_pick_green">#008000</color>
+    <color name="color_pick_cyan">#00FFFF</color>
+    <color name="color_pick_blue">#0000FF</color>
+    <color name="color_pick_purple">#800080</color>
+    <color name="color_pick_pink">#FFC0CB</color>
+
+
 
 </resources>

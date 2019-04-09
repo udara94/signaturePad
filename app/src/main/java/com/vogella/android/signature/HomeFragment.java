@@ -1,14 +1,21 @@
 package com.vogella.android.signature;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.content.pm.Signature;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+
 import com.github.gcacace.signaturepad.views.SignaturePad;
 import android.graphics.Bitmap;
 import android.widget.Toast;
@@ -39,6 +46,7 @@ import android.widget.Toast;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.design.widget.FloatingActionButton;
 
 
 
@@ -47,20 +55,28 @@ public class HomeFragment extends Fragment  {
 
     private TextView mTextMessage;
     private SignaturePad mSignaturePad;
-    private Button mClearButton;
-    private Button mSaveButton;
 
+    private FloatingActionButton mClearButton;
+    private FloatingActionButton mSaveButton;
+    private int currentBackgroundColor = 0xffffffff;
+    private SharedPreferences preferences;
+    private String mSelectedColor;
+    private int mSelectedSize;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view=inflater.inflate(R.layout.activity_home, null);
-
+         View view=inflater.inflate(R.layout.activity_home, null);
+        getActivity().setTitle(R.string.signature_title);
         mTextMessage = (TextView) view.findViewById(R.id.message);
-
         mSignaturePad = (SignaturePad) view.findViewById(R.id.signature_pad);
+
+        pickColor(container);
+        pickSize();
+
         mSignaturePad.setOnSignedListener(new SignaturePad.OnSignedListener() {
+
             @Override
             public void onStartSigning() {
 
@@ -76,16 +92,18 @@ public class HomeFragment extends Fragment  {
             public void onClear() {
                 mSaveButton.setEnabled(false);
                 mClearButton.setEnabled(false);
+//               mSignaturePad.mMinWidth=20;
             }
         });
 
-        mClearButton = (Button) view.findViewById(R.id.clear_button);
-        mSaveButton = (Button) view.findViewById(R.id.save_button);
+        mClearButton = (FloatingActionButton) view.findViewById(R.id.fabClear);
+        mSaveButton = (FloatingActionButton) view.findViewById(R.id.fabSave);
 
         mClearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mSignaturePad.clear();
+               // mSignaturePad.mPaint.setColor(0xFFFFFF00);
             }
         });
 
@@ -95,27 +113,89 @@ public class HomeFragment extends Fragment  {
                 Bitmap signatureBitmap = mSignaturePad.getSignatureBitmap();
                 if (addJpgSignatureToGallery(signatureBitmap)) {
                    // Toast.makeText(HomeFragment.this, "Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),"Signature saved into the Gallery!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),R.string.signature_saved_to_gallery,Toast.LENGTH_SHORT).show();
                 } else {
                    // Toast.makeText(MainActivity.this, "Unable to store the signature", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),"Unable to store the signature!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),R.string.unable_to_store_the_signature,Toast.LENGTH_SHORT).show();
                 }
                 if (addSvgSignatureToGallery(mSignaturePad.getSignatureSvg())) {
                   //  Toast.makeText(MainActivity.this, "SVG Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),"SVG Signature saved into the Gallery",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),R.string.svg_signature_saved_into_gallery,Toast.LENGTH_SHORT).show();
                 } else {
                    // Toast.makeText(MainActivity.this, "Unable to store the SVG signature", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),"Unable to store the SVG signature!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),R.string.unable_to_store_the_svg_signature,Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
 
 
         return view;
     }
 
 
+    private void pickSize(){
+        preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+        mSelectedSize= preferences.getInt("pencil_size",2);
+        mSignaturePad.mMaxWidth = mSelectedSize;
 
+    }
+
+    private void pickColor(ViewGroup container){
+        preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+        mSelectedColor = preferences.getString("pencil_color","ddssd");
+
+
+
+        int color;
+
+        switch (mSelectedColor) {
+
+            case "red":
+                color = ContextCompat.getColor(container.getContext(), R.color.color_pick_red);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+
+            case "orange":
+                color = ContextCompat.getColor(container.getContext(), R.color.color_pick_orange);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+            case "yellow":
+                color = ContextCompat.getColor(container.getContext(), R.color.color_pick_yellow);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+
+            case "green":
+                color = ContextCompat.getColor(container.getContext(), R.color.color_pick_green);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+            case "cyan":
+                color = ContextCompat.getColor(container.getContext(), R.color.color_pick_cyan);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+            case "blue":
+                color = ContextCompat.getColor(container.getContext(), R.color.color_pick_blue);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+            case "purple":
+                color = ContextCompat.getColor(container.getContext(), R.color.color_pick_purple);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+            case "pink":
+                color = ContextCompat.getColor(container.getContext(), R.color.color_pick_pink);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+            default:
+                color = ContextCompat.getColor(container.getContext(), R.color.colorPrimary);
+                mSignaturePad.mPaint.setColor(color);
+                break;
+        }
+    }
+
+    private void clear(){
+        mSignaturePad.clear();
+        mSignaturePad.mPaint.setColor(0xFFFFFF00);
+    }
 
 
 

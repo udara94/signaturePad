@@ -14,7 +14,7 @@ android {
     //compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
     compileSdkVersion 28
 //    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
-    buildToolsVersion '23.0.2'
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 9

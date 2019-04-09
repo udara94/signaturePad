@@ -1,36 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<android.support.constraint.ConstraintLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--android:layout_height="match_parent">-->
-
-
-
-    <!--<TextView-->
-        <!--android:id="@+id/message"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="@dimen/activity_horizontal_margin"-->
-        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
-        <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
-        <!--android:text="@string/title_settings"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--android:textSize="29dp"/>-->
-
-
-<!--</android.support.constraint.ConstraintLayout>-->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+  >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Settings"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        android:gravity="center"
+        android:id="@+id/first_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_pick_color"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_color"
+                android:textSize="@dimen/activity_pick_color_font_size"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/text_pick_color"
+            android:id="@+id/first_color_pallet"
+            android:gravity="center"
+            >
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/color_pick_red"
+
+
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/color_pick_orange"
+
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/color_pick_yellow"
+
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/color_pick_green"
+
+                />
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/first_color_pallet"
+            android:id="@+id/second_color_pallet"
+            android:gravity="center"
+            >
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_cyan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/color_pick_cyan"
+
+
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/color_pick_blue"
+
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_purple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/color_pick_purple"
+
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_pink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/color_pick_pink"
+
+                />
+
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/pencil_size_text">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_pencil_size"
+                android:textSize="@dimen/activity_pick_color_font_size"
+                />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/pencil_size_text"
+            android:max="10"
+            android:min="2"
+             />
+
+
+
+    </RelativeLayout>
+
+
 
 </RelativeLayout>

@@ -58,6 +58,7 @@ public class GalleryFragment extends Fragment {
 
         View view=inflater.inflate(R.layout.activity_gallery, null);
 
+        getActivity().setTitle(R.string.memory_title);
         return view;
     }
 

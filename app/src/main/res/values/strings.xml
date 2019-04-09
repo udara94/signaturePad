@@ -9,4 +9,23 @@
     <string name="agreement">I agree the terms and conditions.</string>
     <string name="clear_pad">Clear Pad</string>
     <string name="save_signature">Save Signature</string>
+    <string name="color_dialog_title">Choose color</string>
+    <string name="setting_title">Settings</string>
+    <string name="memory_title">Memories</string>
+    <string name="signature_title">Signature</string>
+    <string name="signature_saved_to_gallery">Signature saved into the Gallery!</string>
+    <string name="unable_to_store_the_signature">Unable to store the signature!</string>
+    <string name="svg_signature_saved_into_gallery">SVG Signature saved into the Gallery</string>
+    <string name="unable_to_store_the_svg_signature">Unable to store the SVG signature!</string>
+    <string name="pick_color">Pick Color</string>
+    <string name="pick_pencil_size">Pick Pencil Size</string>
+    <string name="color_red_selected">Color Red Selected</string>
+    <string name="color_orange_selected">Color Orange Selected</string>
+    <string name="color_yellow_selected">Color Yellow Selected</string>
+    <string name="color_green_selected">Color Green Selected</string>
+    <string name="color_cyan_selected">Color Cyan Selected</string>
+    <string name="color_blue_selected">Color Blue Selected</string>
+    <string name="color_purple_selected">Color Purple Selected</string>
+    <string name="color_pink_selected">Color Pink Selected</string>
+
 </resources>

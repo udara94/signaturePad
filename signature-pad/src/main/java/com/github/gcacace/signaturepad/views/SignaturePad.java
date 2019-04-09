@@ -47,8 +47,8 @@ public class SignaturePad extends View {
     private Bezier mBezierCached = new Bezier();
 
     //Configurable parameters
-    private int mMinWidth;
-    private int mMaxWidth;
+    public int mMinWidth;
+    public int mMaxWidth;
     private float mVelocityFilterWeight;
     private OnSignedListener mOnSignedListener;
     private boolean mClearOnDoubleClick;
@@ -59,13 +59,13 @@ public class SignaturePad extends View {
     private static final int DOUBLE_CLICK_DELAY_MS = 200;
 
     //Default attribute values
-    private final int DEFAULT_ATTR_PEN_MIN_WIDTH_PX = 3;
-    private final int DEFAULT_ATTR_PEN_MAX_WIDTH_PX = 7;
+    private final int DEFAULT_ATTR_PEN_MIN_WIDTH_PX = 1;
+    private final int DEFAULT_ATTR_PEN_MAX_WIDTH_PX = 2;
     private final int DEFAULT_ATTR_PEN_COLOR = Color.BLACK;
     private final float DEFAULT_ATTR_VELOCITY_FILTER_WEIGHT = 0.9f;
     private final boolean DEFAULT_ATTR_CLEAR_ON_DOUBLE_CLICK = false;
 
-    private Paint mPaint = new Paint();
+    public Paint mPaint = new Paint();
     private Bitmap mSignatureBitmap = null;
     private Canvas mSignatureBitmapCanvas = null;
 
@@ -91,7 +91,7 @@ public class SignaturePad extends View {
         //Fixed parameters
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.STROKE);
-        mPaint.setStrokeCap(Paint.Cap.ROUND);
+        mPaint.setStrokeCap(Paint.Cap.BUTT);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
 
         //Dirty rectangle to update only the changed portion of the view

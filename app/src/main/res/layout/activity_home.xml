@@ -1,52 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<android.support.constraint.ConstraintLayout-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--android:layout_height="match_parent">-->
-
-
-
-
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--&gt;-->
-
-
-
-
-            <!--<com.github.gcacace.signaturepad.views.SignaturePad-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent"-->
-                <!--android:id="@+id/signature_pad" />-->
-
-
-
-
-        <!--&lt;!&ndash;<include&ndash;&gt;-->
-            <!--&lt;!&ndash;android:id="@+id/toolbar"&ndash;&gt;-->
-            <!--&lt;!&ndash;layout="@layout/activity_navigation_tab"/>&ndash;&gt;-->
-
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="80dp">-->
-            <!--<Button-->
-                <!--android:id="@+id/clear_button"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_weight="1"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/clear_pad"-->
-                <!--android:enabled="false" />-->
-
-            <!--<Button-->
-                <!--android:id="@+id/save_button"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_weight="1"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/save_signature"-->
-                <!--android:enabled="false" />-->
-        <!--</LinearLayout>-->
-    <!--</RelativeLayout>-->
 
 
 
@@ -54,15 +6,12 @@
 <!--</android.support.constraint.ConstraintLayout>-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:text="Home"-->
-        <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />-->
+
+
     <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -78,25 +27,67 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
-        <Button
-            android:id="@+id/clear_button"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/clear_pad"
-            android:enabled="false" />
+            android:orientation="vertical"
+            >
 
-        <Button
-            android:id="@+id/save_button"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/ic_save"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/colorDarkYellow"
+
+                />
+
+            <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabClear"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/save_signature"
-            android:enabled="false" />
-    </LinearLayout>
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_clear"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/colorDarkYellow"
+            />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="80dp"-->
+        <!--&gt;-->
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/clear_button"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="@string/clear_pad"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:enabled="false" />&ndash;&gt;-->
+
+      <!--&lt;!&ndash;&ndash;&gt;-->
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/save_button"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="@string/save_signature"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:enabled="false" />&ndash;&gt;-->
+       <!---->
+      <!---->
+
+
+    <!--</LinearLayout>-->
+
 </RelativeLayout>
 
 </RelativeLayout>

@@ -14,6 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
@@ -47,7 +50,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.FloatingActionButton;
-
+import android.app.AlertDialog;
 
 
 public class HomeFragment extends Fragment  {
@@ -71,6 +74,7 @@ public class HomeFragment extends Fragment  {
         getActivity().setTitle(R.string.signature_title);
         mTextMessage = (TextView) view.findViewById(R.id.message);
         mSignaturePad = (SignaturePad) view.findViewById(R.id.signature_pad);
+
 
         pickColor(container);
         pickSize();
@@ -99,32 +103,22 @@ public class HomeFragment extends Fragment  {
         mClearButton = (FloatingActionButton) view.findViewById(R.id.fabClear);
         mSaveButton = (FloatingActionButton) view.findViewById(R.id.fabSave);
 
+         mSaveButton.setEnabled(false);
+         mClearButton.setEnabled(false);
+
         mClearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mSignaturePad.clear();
-               // mSignaturePad.mPaint.setColor(0xFFFFFF00);
+
+               clearAlertDialoge(view);
             }
         });
 
         mSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bitmap signatureBitmap = mSignaturePad.getSignatureBitmap();
-                if (addJpgSignatureToGallery(signatureBitmap)) {
-                   // Toast.makeText(HomeFragment.this, "Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),R.string.signature_saved_to_gallery,Toast.LENGTH_SHORT).show();
-                } else {
-                   // Toast.makeText(MainActivity.this, "Unable to store the signature", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),R.string.unable_to_store_the_signature,Toast.LENGTH_SHORT).show();
-                }
-                if (addSvgSignatureToGallery(mSignaturePad.getSignatureSvg())) {
-                  //  Toast.makeText(MainActivity.this, "SVG Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),R.string.svg_signature_saved_into_gallery,Toast.LENGTH_SHORT).show();
-                } else {
-                   // Toast.makeText(MainActivity.this, "Unable to store the SVG signature", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(getActivity(),R.string.unable_to_store_the_svg_signature,Toast.LENGTH_SHORT).show();
-                }
+
+                open(view);
             }
         });
 
@@ -192,11 +186,92 @@ public class HomeFragment extends Fragment  {
         }
     }
 
-    private void clear(){
-        mSignaturePad.clear();
-        mSignaturePad.mPaint.setColor(0xFFFFFF00);
+
+
+    public void open(final View view){
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+        final EditText edittext = new EditText(getContext());
+
+        edittext.setWidth(20);
+
+
+        alertDialogBuilder.setMessage("Signature Owner Name");
+
+
+        alertDialogBuilder.setView(edittext);
+
+                alertDialogBuilder.setPositiveButton("Save",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+
+                                if(edittext.getText().toString().isEmpty()){
+                                   edittext.setHint("please enter name");
+                                }
+                                else {
+                                    saveImage(edittext.getText().toString());
+                                }
+
+
+                            }
+                        });
+
+        alertDialogBuilder.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 
+    public void clearAlertDialoge(View view){
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+
+
+        alertDialogBuilder.setMessage("Clear Signature ?");
+
+        alertDialogBuilder.setPositiveButton("Clear",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        mSignaturePad.clear();
+                    }
+                });
+
+        alertDialogBuilder.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
+
+    
+
+    public void saveImage(String name){
+                        Bitmap signatureBitmap = mSignaturePad.getSignatureBitmap();
+                if (addJpgSignatureToGallery(signatureBitmap,name)) {
+                   // Toast.makeText(HomeFragment.this, "Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),R.string.signature_saved_to_gallery,Toast.LENGTH_SHORT).show();
+                } else {
+                   // Toast.makeText(MainActivity.this, "Unable to store the signature", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),R.string.unable_to_store_the_signature,Toast.LENGTH_SHORT).show();
+                }
+                if (addSvgSignatureToGallery(mSignaturePad.getSignatureSvg())) {
+                  //  Toast.makeText(MainActivity.this, "SVG Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),R.string.svg_signature_saved_into_gallery,Toast.LENGTH_SHORT).show();
+                } else {
+                   // Toast.makeText(MainActivity.this, "Unable to store the SVG signature", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),R.string.unable_to_store_the_svg_signature,Toast.LENGTH_SHORT).show();
+                }
+    }
 
 
 
@@ -220,10 +295,10 @@ public class HomeFragment extends Fragment  {
         stream.close();
     }
 
-    public boolean addJpgSignatureToGallery(Bitmap signature) {
+    public boolean addJpgSignatureToGallery(Bitmap signature,String name) {
         boolean result = false;
         try {
-            File photo = new File(getAlbumStorageDir("SignaturePad"), String.format("Signature_%d.jpg", System.currentTimeMillis()));
+            File photo = new File(getAlbumStorageDir("SignaturePad"), String.format(name+"_%d.jpg", System.currentTimeMillis()));
             saveBitmapToJPG(signature, photo);
             scanMediaFile(photo);
             result = true;

@@ -161,7 +161,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/pencil_size_text"
-            android:max="10"
+            android:max="20"
             android:min="2"
              />
 

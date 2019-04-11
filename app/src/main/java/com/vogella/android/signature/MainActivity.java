@@ -23,6 +23,8 @@ import android.widget.Toast;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 import com.github.gcacace.signaturepad.views.SignaturePad;
 
@@ -50,7 +52,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                    break;
 
                 case R.id.navigation_gallery:
-                    fragment=new GalleryFragment();
+                    //fragment=new GalleryFragment();
+                    Intent intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent, "Select Picture"),1);
                    break;
 
                 case R.id.navigation_settings:
@@ -62,6 +68,24 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             return loadFragment(fragment);
 
     };
+
+    @Override
+    public void onBackPressed() {
+
+        new AlertDialog.Builder(this)
+                .setTitle("Exit Signature ?")
+                .setMessage("Do you want to close the signature ?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
